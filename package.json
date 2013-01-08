@@ -4,7 +4,7 @@
   "author": "Ray Viljoen <rayviljoen@me.com>",
   "description": "Snockets plugin for wintersmith",
   "license": "MIT",
-  "keywords": ["wintersmith", "snockets", "uglify"]
+  "keywords": ["wintersmith", "snockets", "uglify"],
   "repository": {
     "type": "git",
     "url": "https://github.com/RayViljoen/wintersmith-snockets.git"
