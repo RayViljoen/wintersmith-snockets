@@ -2,10 +2,17 @@
   "name": "wintersmith-snockets",
   "version": "0.1.0",
   "author": "Ray Viljoen <rayviljoen@me.com>",
-  "description": "snockets (sprockets) plugin for wintersmith",
+  "description": "Snockets plugin for wintersmith",
   "license": "MIT",
+  "scripts": {
+  	"test": "mocha"
+  },
   "dependencies": {
     "coffee-script": "~1.4.0",
     "snockets": "~1.3.8"
+  },
+  "devDependencies": {
+    "mocha": "~1.7.4",
+    "wintersmith": "~1.2.2"
   }
 }

@@ -25,4 +25,8 @@ then add `./node_modules/wintersmith-snockets/` to `config.json` like:
 
 Test is written using [Mocha](http://visionmedia.github.com/mocha/). Install it globally, then run
 
-    $ mocha --compilers coffee:coffee-script
+    $ mocha
+
+or
+  
+    $ npm test
