@@ -1,4 +1,4 @@
-# wintersmith-snockets
+# wintersmith-snockets [![Build Status](https://travis-ci.org/RayViljoen/wintersmith-snockets.png?branch=master)](https://travis-ci.org/RayViljoen/wintersmith-snockets)
 
 [Snockets](https://github.com/TrevorBurnham/snockets) plugin for [wintersmith](https://github.com/jnordberg/wintersmith).
 
