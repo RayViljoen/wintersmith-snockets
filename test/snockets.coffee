@@ -28,7 +28,6 @@ describe "Snockets compilation", ->
 			# Check main file compiled correctly
 			fs.readFile './test/temp/js/main.js', (err, data) ->
 				throw err if err
-				console.log data.toString()
 				unless data.toString() is compiledScript
 					throw 'main.js did not compile as expected'
 				do done
@@ -37,3 +36,6 @@ describe "Snockets compilation", ->
 	after (done) ->
 		rimraf './test/temp', (err) ->
 			do done
+
+
+
