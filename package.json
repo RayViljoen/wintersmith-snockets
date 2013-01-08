@@ -10,7 +10,7 @@
     "url": "https://github.com/RayViljoen/wintersmith-snockets.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "make test"
   },
   "dependencies": {
     "coffee-script": "~1.4.0",
