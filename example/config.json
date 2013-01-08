@@ -1,0 +1,12 @@
+{
+	"output" : "./public",
+	"contents" : "./contents",
+	"templates" : "./templates",
+	"locals": {
+		"name": "Wintersmith-snockets example",
+	},
+	"plugins" : [
+		
+		"./node_modules/wintersmith-snockets"
+	]
+}
