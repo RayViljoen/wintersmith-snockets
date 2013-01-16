@@ -4,7 +4,7 @@
 
 ### install:
 
-    npm install wintersmith-coffee
+    npm install wintersmith-snockets
   
 then add `./node_modules/wintersmith-snockets/` to `config.json` like:
 
