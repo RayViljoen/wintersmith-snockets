@@ -5,25 +5,21 @@ Snockets = require 'snockets'
 snockets = new Snockets()
 
 module.exports = (wintersmith, callback) ->
-
 	class SnocketsPlugin extends wintersmith.ContentPlugin
 
-		constructor: (@_filename, @_base, @_source) ->
+		constructor: (@_filepath, @_source) ->
 
 		# Change extension to JS
-		getFilename: -> @_filename.replace /coffee$/, 'js'
+		getFilename: -> path.basename(@_filepath.full).replace /coffee$/, 'js'
 
-		render: (locals, contents, templates, callback) ->
-			
-			# Get full path
-			file = path.join @_base, @_filename
+		getView: ->
+			(env, locals, contents, templates, callback) ->
+				# Create concatenated and minified output file
+				snockets.getConcatenation @_filepath.full, minify: true, (err, js) ->
+					callback null, new Buffer js
 
-			# Create concatinated and minified output file
-			snockets.getConcatenation file, minify: true, (err, js) ->
-				callback null, new Buffer js
-				
-	SnocketsPlugin.fromFile = (filename, base, callback) ->
-		callback null, new SnocketsPlugin filename, base
+	SnocketsPlugin.fromFile = (filepath, callback) ->
+		callback null, new SnocketsPlugin filepath
 
 	# Glob any js or coffee files
 	wintersmith.registerContentPlugin 'scripts', '**/*.+(js|coffee)', SnocketsPlugin
